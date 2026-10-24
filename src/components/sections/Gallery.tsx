@@ -8,12 +8,6 @@ import { Lightbox } from '../ui/Lightbox'
 import { SectionHeading } from '../ui/SectionHeading'
 import { TicketButton } from '../ui/TicketButton'
 
-const shapeClass = {
-  arch: 'frame-arch',
-  round: 'frame-round',
-  plate: 'rounded-md',
-} as const
-
 export function Gallery() {
   const [index, setIndex] = useState<number | null>(null)
   const [showAll, setShowAll] = useState(false)
@@ -34,7 +28,7 @@ export function Gallery() {
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.08 }}
-          className="grid auto-rows-[130px] grid-cols-2 gap-2.5 sm:auto-rows-[200px] sm:gap-3 md:grid-cols-3 lg:auto-rows-[210px] lg:grid-cols-4 lg:gap-4"
+          className="grid grid-cols-2 gap-2.5 sm:gap-3 md:grid-cols-3 lg:grid-cols-5 lg:gap-4"
         >
           {gallery.map((g, i) => (
             <motion.button
@@ -42,7 +36,7 @@ export function Gallery() {
               variants={fadeUp}
               onClick={() => setIndex(i)}
               aria-label={`Ingrandisci: ${g.alt}`}
-              className={`group relative overflow-hidden bg-smoke shadow-soft ring-4 ring-cream ${shapeClass[g.shape ?? 'plate']} ${g.span ?? ''} ${i >= 6 && !showAll ? 'hidden md:block' : ''}`}
+              className={`frame-photo group relative aspect-square overflow-hidden bg-smoke shadow-soft ring-4 ring-cream ${i === gallery.length - 1 ? 'max-md:col-span-2 max-md:w-[calc(50%-0.3rem)] max-md:justify-self-center' : ''} ${i >= 6 && !showAll ? 'hidden md:block' : ''}`}
             >
               <img
                 src={withBase(g.src.replace('.webp', '-sm.webp'))}

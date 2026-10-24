@@ -25,7 +25,7 @@ export function Story() {
         <div className="relative order-2 mx-auto h-[270px] w-full max-w-[620px] sm:h-[560px] lg:order-1 lg:col-span-6 lg:max-w-none">
           <motion.div
             style={{ y: y1 }}
-            className="frame-plate absolute left-0 top-0 h-[72%] w-[74%] overflow-hidden shadow-soft ring-[8px] ring-cream outline outline-1 outline-smoke/15"
+            className="frame-photo absolute left-0 top-0 h-full w-full overflow-hidden sm:h-[72%] sm:w-[74%] shadow-soft ring-[8px] ring-cream outline outline-1 outline-smoke/15"
           >
             <img
               src={withBase('/images/locale/sala.webp')}
@@ -36,7 +36,7 @@ export function Story() {
           </motion.div>
           <motion.div
             style={{ y: y2 }}
-            className="frame-arch absolute bottom-0 right-0 h-[64%] w-[44%] overflow-hidden shadow-plate ring-[8px] ring-cream outline outline-1 outline-smoke/15"
+            className="frame-photo absolute bottom-0 right-0 hidden h-[64%] w-[44%] overflow-hidden sm:block shadow-plate ring-[8px] ring-cream outline outline-1 outline-smoke/15"
           >
             <img
               src={withBase('/images/locale/sala-colonna.webp')}
@@ -60,7 +60,7 @@ export function Story() {
             className="mb-5 md:mb-8"
           />
           <Reveal delay={0.1}>
-            <div className="space-y-4 md:space-y-5 text-lg font-light leading-relaxed text-ink/75">
+            <div className="space-y-4 text-center text-lg font-light leading-relaxed text-ink/75 md:space-y-5 lg:text-left">
               <p>
                 Il Vaporino è una <strong className="font-semibold text-ink">trattoria-pizzeria di quartiere</strong>, nel
                 Navile di Bologna: un ambiente elegante e accogliente, con una grande sala, murales di treni d’altri tempi e
@@ -80,7 +80,7 @@ export function Story() {
           <Reveal delay={0.2}>
             <ul className="mt-6 grid grid-cols-2 gap-2 md:mt-9 md:gap-3">
               {perks.map(({ icon: Icon, label }) => (
-                <li key={label} className="flex items-center gap-3 rounded-[3px] bg-paper/70 px-3 py-2.5 font-sign text-[0.72rem] md:px-4 md:py-3 md:text-[0.8rem] uppercase tracking-[0.14em] text-smoke ring-1 ring-smoke/10">
+                <li key={label} className="flex items-center justify-center gap-3 rounded-[3px] lg:justify-start bg-paper/70 px-3 py-2.5 font-sign text-[0.72rem] md:px-4 md:py-3 md:text-[0.8rem] uppercase tracking-[0.14em] text-smoke ring-1 ring-smoke/10">
                   <Icon size={18} className="shrink-0 text-signal" />
                   {label}
                 </li>

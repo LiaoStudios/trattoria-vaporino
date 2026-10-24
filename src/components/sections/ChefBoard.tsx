@@ -76,7 +76,7 @@ export function ChefBoard() {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={inView}
           transition={{ duration: 0.8 }}
-          className="relative hidden min-h-[360px] overflow-hidden frame-arch lg:block shadow-plate ring-[8px] ring-cream outline outline-1 outline-smoke/15 lg:col-span-4"
+          className="relative hidden min-h-[360px] overflow-hidden frame-photo lg:block shadow-plate ring-[8px] ring-cream outline outline-1 outline-smoke/15 lg:col-span-4"
         >
           <img src={withBase('/images/piatti/spiedini-gamberi.webp')} alt="Spiedini di gamberi grigliati" loading="lazy" className="absolute inset-0 h-full w-full object-cover" />
           <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-smoke-deep/90 to-transparent p-7 pt-24 text-center">

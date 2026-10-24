@@ -22,7 +22,7 @@ export function SectionHeading({ stop, eyebrow, title, text, align = 'center', l
       initial="hidden"
       whileInView="show"
       viewport={inView}
-      className={`${center ? 'mx-auto text-center' : ''} max-w-3xl ${className}`}
+      className={`${center ? 'mx-auto text-center' : 'mx-auto text-center lg:mx-0 lg:text-left'} max-w-3xl ${className}`}
     >
       <div
         className={`mb-4 inline-flex md:mb-5 items-stretch overflow-hidden rounded-[3px] font-sign text-[0.78rem] font-medium uppercase tracking-[0.2em] ${

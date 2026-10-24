@@ -93,15 +93,19 @@
   .btn-line:hover {
     @apply bg-smoke text-cream;
   }
+  /* variante per fondi scuri / foto */
+  .btn-line-light {
+    @apply bg-transparent text-cream;
+    box-shadow: inset 0 0 0 1.5px currentColor;
+  }
+  .btn-line-light:hover {
+    @apply bg-cream text-smoke;
+  }
 
   /* ── Cornici foto ── */
-  /* Finestrino di vagone: arco in alto */
-  .frame-arch {
-    border-radius: 9999px 9999px 1rem 1rem;
-  }
-  /* Oblò rotondo */
-  .frame-round {
-    border-radius: 9999px;
+  /* Unica forma per tutte le foto: rettangolo con angoli appena smussati */
+  .frame-photo {
+    border-radius: 3px;
   }
   /* Targa: rettangolo con doppio filetto interno */
   .frame-plate {

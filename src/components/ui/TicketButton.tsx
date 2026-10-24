@@ -1,13 +1,14 @@
 import type { ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 
-type Variant = 'red' | 'cream' | 'dark' | 'line'
+type Variant = 'red' | 'cream' | 'dark' | 'line' | 'lineLight'
 
 const variants: Record<Variant, string> = {
   red: 'btn-red',
   cream: 'btn-cream',
   dark: 'btn-dark',
   line: 'btn-line',
+  lineLight: 'btn-line-light',
 }
 
 interface Props {

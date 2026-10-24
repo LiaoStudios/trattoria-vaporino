@@ -50,15 +50,10 @@ export default {
           from: { transform: 'translateX(-10%)' },
           to: { transform: 'translateX(110%)' },
         },
-        'plate-spin': {
-          from: { transform: 'rotate(0deg)' },
-          to: { transform: 'rotate(360deg)' },
-        },
       },
       animation: {
         puff: 'puff 4.5s ease-out infinite',
         'rail-run': 'rail-run 14s linear infinite',
-        'plate-spin': 'plate-spin 90s linear infinite',
       },
     },
   },

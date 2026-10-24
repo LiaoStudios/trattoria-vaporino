@@ -16,7 +16,7 @@ export function Oven() {
     <section id="pizza" className="relative overflow-hidden bg-station-deep py-14 text-cream md:py-32">
       <div className="rail absolute inset-x-0 top-6 text-cream/10" aria-hidden />
       <div className="mx-auto grid max-w-[1440px] items-center gap-8 px-6 md:px-12 lg:grid-cols-12 lg:gap-16">
-        <div className="order-2 lg:order-1 lg:col-span-6">
+        <div className="order-2 text-center lg:order-1 lg:col-span-6 lg:text-left">
           <SectionHeading
             light
             align="left"
@@ -34,7 +34,7 @@ export function Oven() {
           </Reveal>
 
           <Reveal delay={0.2}>
-            <ul className="mt-6 space-y-2.5 md:mt-9 md:space-y-3">
+            <ul className="mt-6 space-y-2.5 text-left md:mt-9 md:space-y-3">
               {tickets.map((t, i) => (
                 <li
                   key={t.name}
@@ -53,7 +53,7 @@ export function Oven() {
           </Reveal>
 
           <Reveal delay={0.3}>
-            <div className="mt-6 flex flex-wrap items-center gap-5 md:mt-9">
+            <div className="mt-6 flex flex-wrap items-center justify-center gap-5 md:mt-9 lg:justify-start">
               <TicketButton to="/menu#pizze" variant="cream">
                 <Flame size={16} /> Tutte le pizze
               </TicketButton>
@@ -66,7 +66,7 @@ export function Oven() {
 
         <Reveal className="order-1 lg:order-2 lg:col-span-6">
           <div className="relative mx-auto aspect-square w-[58%] max-w-[560px] sm:w-full">
-            <div className="absolute inset-0 overflow-hidden frame-round shadow-plate ring-[10px] ring-cream/90">
+            <div className="absolute inset-0 overflow-hidden frame-photo shadow-plate ring-[10px] ring-cream/90">
               <img
                 src={withBase('/images/piatti/pizza-salame.webp')}
                 alt="Pizza con mozzarella e salame piccante appena sfornata"

@@ -57,7 +57,7 @@ export function Specialties() {
           {specialties.map((s, i) => (
             <motion.div key={s.title} variants={fadeUp} className={`w-[60%] shrink-0 snap-center sm:w-auto ${i % 2 === 1 ? 'lg:mt-14' : ''}`}>
               <Link to={s.to} className="group block">
-                <div className="frame-arch relative aspect-[4/5] overflow-hidden bg-smoke md:aspect-[3/4] shadow-soft ring-[8px] ring-cream outline outline-1 outline-smoke/15">
+                <div className="frame-photo relative aspect-[4/5] overflow-hidden bg-smoke md:aspect-[3/4] shadow-soft ring-[8px] ring-cream outline outline-1 outline-smoke/15">
                   <img
                     src={withBase(s.img)}
                     alt={s.title}

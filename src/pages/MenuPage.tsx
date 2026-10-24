@@ -21,7 +21,7 @@ function Row({ item }: { item: MenuItem }) {
           src={withBase(item.image)}
           alt={item.name}
           loading="lazy"
-          className="h-16 w-16 shrink-0 rounded-full object-cover shadow-soft ring-2 ring-cream outline outline-1 outline-smoke/20"
+          className="h-16 w-16 shrink-0 rounded-[3px] object-cover shadow-soft ring-2 ring-cream outline outline-1 outline-smoke/20"
         />
       )}
       <div className="min-w-0 flex-1">
@@ -123,7 +123,7 @@ export function MenuPage() {
                 {category.blurb && <p className="mt-3 max-w-xl text-lg font-light text-ink/65">{category.blurb}</p>}
               </div>
               {category.image && (
-                <div className="frame-arch hidden h-44 w-36 overflow-hidden bg-smoke shadow-soft ring-[6px] ring-cream outline outline-1 outline-smoke/15 md:block">
+                <div className="frame-photo hidden h-44 w-36 overflow-hidden bg-smoke shadow-soft ring-[6px] ring-cream outline outline-1 outline-smoke/15 md:block">
                   <img src={withBase(category.image.replace('.webp', '-sm.webp'))} alt="" className="h-full w-full object-cover" />
                 </div>
               )}
